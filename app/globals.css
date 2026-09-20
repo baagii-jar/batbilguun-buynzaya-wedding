@@ -79,8 +79,36 @@ body {
   animation: spinSlow 30s linear infinite;
 }
 
-.animate-spin-slow-reverse {
-  animation: spinSlow 35s linear infinite reverse;
+/* Fade Out Animation for Opening Gate */
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
+.animate-fade-out-zoom {
+  animation: fadeOutZoom 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade In Rise Animation for Main Content */
+@keyframes fadeInRise {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-rise {
+  animation: fadeInRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Falling Leaves / Petals Animation */

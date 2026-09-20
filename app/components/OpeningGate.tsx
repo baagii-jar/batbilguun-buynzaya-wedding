@@ -8,19 +8,27 @@ interface OpeningGateProps {
 }
 
 export function OpeningGate({ onOpen }: OpeningGateProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isFading, setIsFading] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   const handleOpenInvite = () => {
-    setIsOpen(true);
+    if (isFading || isHidden) return;
+    setIsFading(true);
     onOpen();
+
+    setTimeout(() => {
+      setIsHidden(true);
+    }, 850);
   };
 
-  if (isOpen) return null;
+  if (isHidden) return null;
 
   return (
     <div
       onClick={handleOpenInvite}
-      className="fixed inset-0 z-50 bg-[#0A0A0A] flex justify-center items-center cursor-pointer select-none overflow-hidden transition-all duration-700 animate-fade-in"
+      className={`fixed inset-0 z-50 bg-[#0A0A0A] flex justify-center items-center cursor-pointer select-none overflow-hidden transition-opacity duration-700 ${
+        isFading ? "animate-fade-out-zoom pointer-events-none" : ""
+      }`}
     >
       {/* Centered Mobile Photo Frame on PC */}
       <div className="relative w-full max-w-[480px] h-full flex flex-col justify-end items-center overflow-hidden bg-[#0A0A0A]">
