@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF8F5;
+  --foreground: #2C2825;
+  --wedding-gold: #C5A059;
+  --wedding-gold-dark: #A37F38;
+  --wedding-gold-light: #F4E8D0;
+  --wedding-cream: #FAF8F5;
+  --wedding-card-bg: #FAF8F5;
+  --wedding-text-muted: #786F66;
+  --wedding-desktop-bg: #FAF8F5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-wedding-gold: var(--wedding-gold);
+  --color-wedding-gold-dark: var(--wedding-gold-dark);
+  --color-wedding-gold-light: var(--wedding-gold-light);
+  --color-wedding-cream: var(--wedding-cream);
+  --color-wedding-card: var(--wedding-card-bg);
+  --color-wedding-muted: var(--wedding-text-muted);
+  --color-wedding-desktop: var(--wedding-desktop-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: #FAF8F5;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom serif typography for titles */
+.font-wedding-serif {
+  font-family: var(--font-cormorant, 'Cormorant Garamond'), Georgia, serif;
+}
+
+/* Image Bottom Fade Gradient */
+.mask-gradient-hero {
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Metallic gold text effect */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pulsing heart animation */
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.animate-heart-pulse {
+  animation: heartPulse 1.8s infinite ease-in-out;
+}
+
+/* Slow Rotating Wreath Circle Animation */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spinSlow 35s linear infinite reverse;
+}
+
+/* Falling Leaves / Petals Animation */
+@keyframes fallAndSway {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) rotate(0deg) translateX(0);
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg) translateX(60px);
+  }
+}
+
+.petal-particle {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  z-index: 40;
+  animation: fallAndSway 10s linear infinite;
 }

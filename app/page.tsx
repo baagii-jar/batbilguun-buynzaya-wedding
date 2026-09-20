@@ -1,9 +1,5 @@
-import React from 'react'
+import { WeddingInvitePage } from "./components/WeddingInvitePage";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
+export default function Home() {
+  return <WeddingInvitePage side="husband" />;
 }
-
-export default page
