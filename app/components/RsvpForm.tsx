@@ -3,6 +3,7 @@
 import { useState } from "react";
 import confetti from "canvas-confetti";
 import { CornerBotanicalBranch } from "./FloralDecor";
+import { supabase } from "../../lib/supabaseClient";
 
 export function RsvpForm() {
   const [name, setName] = useState("");
@@ -10,13 +11,33 @@ export function RsvpForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    try {
+      // 1. Save to Supabase
+      const supabasePromise = supabase.from("rsvps").insert([
+        { name: name.trim(), attendance },
+      ]);
+
+      // 2. Save to Google Sheets if Webhook URL is set
+      const sheetUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL;
+      const googleSheetPromise = sheetUrl
+        ? fetch(sheetUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name.trim(), attendance }),
+        })
+        : Promise.resolve();
+
+      await Promise.allSettled([supabasePromise, googleSheetPromise]);
+    } catch (err) {
+      console.error("RSVP submit catch error:", err);
+    } finally {
       setIsSubmitting(false);
       setSubmitted(true);
 
@@ -30,7 +51,7 @@ export function RsvpForm() {
       } catch {
         // Fallback gracefully
       }
-    }, 600);
+    }
   };
 
   const options = [
@@ -98,11 +119,10 @@ export function RsvpForm() {
                 <div
                   key={opt.id}
                   onClick={() => setAttendance(opt.id)}
-                  className={`w-full px-4 py-3.5 bg-[#FAF8F4] border transition-all cursor-pointer flex items-center gap-3 ${
-                    attendance === opt.id
+                  className={`w-full px-4 py-3.5 bg-[#FAF8F4] border transition-all cursor-pointer flex items-center gap-3 ${attendance === opt.id
                       ? "border-[#8C6D37] bg-[#F7F2E8] shadow-2xs"
                       : "border-[#D9CEBE] hover:border-[#B5A693]"
-                  }`}
+                    }`}
                 >
                   {/* Custom Radio Circle */}
                   <div className="w-4 h-4 rounded-full border border-[#8C6D37] flex items-center justify-center shrink-0">
