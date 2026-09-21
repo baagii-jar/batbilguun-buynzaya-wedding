@@ -27,14 +27,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=4",
-        secureUrl: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=4",
+        url: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=5",
+        secureUrl: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=5",
         width: 1200,
         height: 630,
         type: "image/jpeg",
         alt: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
+    description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
+    images: ["https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=5"],
   },
 };
 
