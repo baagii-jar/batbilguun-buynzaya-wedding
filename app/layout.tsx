@@ -15,20 +15,20 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://batbilguun-buynzaya-wedding.vercel.app'),
+  metadataBase: new URL('https://batbilguun-buynzaya-wedding.netlify.app'),
   title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
   description: "Аав ээж, ах дүү, найз нөхөд та бүхнийгээ манай хуримын баярт хүрэлцэн ирэхийг урьж байна.",
   openGraph: {
     title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
     description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
-    url: "https://batbilguun-buynzaya-wedding.vercel.app",
+    url: "https://batbilguun-buynzaya-wedding.netlify.app",
     siteName: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
     locale: "mn_MN",
     type: "website",
     images: [
       {
-        url: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15",
-        secureUrl: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15",
+        url: "https://batbilguun-buynzaya-wedding.netlify.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15",
+        secureUrl: "https://batbilguun-buynzaya-wedding.netlify.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15",
         width: 1200,
         height: 630,
         type: "image/png",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
     description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
-    images: ["https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15"],
+    images: ["https://batbilguun-buynzaya-wedding.netlify.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15"],
   },
 
 };
