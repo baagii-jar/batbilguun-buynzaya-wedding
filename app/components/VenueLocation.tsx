@@ -50,7 +50,7 @@ export function VenueLocation({ activeSide = "husband" }: VenueLocationProps) {
         rel="noopener noreferrer"
         className="bg-[#1F1C18] hover:bg-black text-white py-3.5 px-8 rounded-none text-xs font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 cursor-pointer"
       >
-        <span>📍</span> ГАЗРЫН ЗУРАГ
+        ГАЗРЫН ЗУРАГ
       </a>
     </section>
   );
