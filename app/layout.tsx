@@ -42,9 +42,7 @@ export const metadata: Metadata = {
     description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
     images: ["https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.png?v=15"],
   },
-  other: {
-    "fb:app_id": "1600484488335139",
-  },
+
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
@@ -53,6 +51,9 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
       lang="mn"
       className={`${geistSans.variable} ${cormorantGaramond.variable} h-full antialiased`}
     >
+      <head>
+        <meta property="fb:app_id" content="1600484488335139" />
+      </head>
       <body className="min-h-full flex flex-col justify-start items-center bg-[var(--wedding-desktop-bg)] text-[#2C2825]">
         {children}
       </body>
