@@ -7,7 +7,7 @@ import { WreathCircle } from "./FloralDecor";
 
 const galleryImages = [
   { src: "/images/GCWd_BDR.jpg", alt: "Дурсамж 1" },
-  { src: "/images/qIw8uJu2.jpg", alt: "Дурсамж 2" },
+  { src: "/images/fw5OYa9i.jpg", alt: "Дурсамж 2" },
   { src: "/images/Xob11a8w.jpg", alt: "Дурсамж 3" },
   { src: "/images/ydt-3nJc.jpg", alt: "Дурсамж 4" },
   { src: "/images/sA8p6QrA.jpg", alt: "Дурсамж 5" },

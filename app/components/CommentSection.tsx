@@ -35,7 +35,7 @@ export function CommentSection() {
         .select("*")
         .order("created_at", { ascending: false });
 
-      if (error) {
+      if (error && Object.keys(error).length > 0) {
         console.error("Error fetching comments:", error);
       } else if (data) {
         setComments(data);

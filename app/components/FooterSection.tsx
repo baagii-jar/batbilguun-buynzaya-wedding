@@ -9,7 +9,7 @@ export function FooterSection() {
       {/* Generously Sized Blended Footer Photo */}
       <div className="relative w-full aspect-[4/5] max-h-[500px] mb-4 bg-[#FAF8F5]">
         <Image
-          src="/images/qIw8uJu2.jpg"
+          src="/images/fw5OYa9i.jpg"
           alt="Ц.Батбилгүүн & Н.Буянзаяа хуримын зураг"
           fill
           priority

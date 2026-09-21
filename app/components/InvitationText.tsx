@@ -12,7 +12,7 @@ interface InvitationTextProps {
 }
 
 export function InvitationText({ activeSide = "husband" }: InvitationTextProps) {
-  const isHusbandSide = activeSide === "husband" || activeSide === "groom";
+  const isHusbandSide = activeSide === "husband";
 
   const husbandParents = "Ц.Цогбадрах & Т.Тунгалаг";
   const wifeParents = "Д.Ням-Очир & Б.Цэцэгсүрэн";
@@ -84,18 +84,20 @@ export function InvitationText({ activeSide = "husband" }: InvitationTextProps) 
         </div>
 
         {/* Family Parents Note */}
-        <div className="mt-4 pt-4 border-t border-[#C5A059]/30 w-full flex justify-between px-1 text-center font-wedding-serif text-[#8C6D37]">
-          <div className="flex flex-col w-1/2 items-center">
-            <span className="uppercase text-[9px] sm:text-[10px] tracking-widest mb-1 text-[#786F66]">Хүүгийн эцэг эх:</span>
-            <span className="text-[13px] sm:text-sm">Ц.Цогбадрах &</span>
-            <span className="text-[13px] sm:text-sm">Т.Тунгалаг</span>
-          </div>
-          <div className="w-[1px] bg-[#C5A059]/30" />
-          <div className="flex flex-col w-1/2 items-center">
-            <span className="uppercase text-[9px] sm:text-[10px] tracking-widest mb-1 text-[#786F66]">Охины эцэг эх:</span>
-            <span className="text-[13px] sm:text-sm">Д.Ням-Очир &</span>
-            <span className="text-[13px] sm:text-sm">Б.Цэцэгсүрэн</span>
-          </div>
+        <div className="mt-4 pt-4 border-t border-[#C5A059]/30 w-full flex justify-center px-1 text-center font-wedding-serif text-[#8C6D37]">
+          {isHusbandSide ? (
+            <div className="flex flex-col items-center">
+              <span className="uppercase text-[10px] tracking-widest mb-1 text-[#786F66]">Хүүгийн эцэг эх:</span>
+              <span className="text-sm">Б.Цогбадрах & Э.Тунгалаг</span>
+              <span className="text-[11px] sm:text-xs mt-1.5 text-[#786F66]">Хаяг: Ховд аймаг Зэрэг сум, Гүвээ баг</span>
+            </div>
+          ) : (
+            <div className="flex flex-col items-center">
+              <span className="uppercase text-[10px] tracking-widest mb-1 text-[#786F66]">Охины эцэг эх:</span>
+              <span className="text-sm">Л.Ням-Очир & Т.Цэцэгсүрэн</span>
+              <span className="text-[11px] sm:text-xs mt-1.5 text-[#786F66]">Хаяг: Ховд аймаг Жаргалант сум, Тахилт 16-8А тоот</span>
+            </div>
+          )}
         </div>
 
         {/* Bottom Monogram Circle Wreath Emblem */}

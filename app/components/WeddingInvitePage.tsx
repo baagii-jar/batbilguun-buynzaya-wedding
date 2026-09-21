@@ -65,7 +65,7 @@ export function WeddingInvitePage({ side = "husband" }: WeddingInvitePageProps) 
 
       {/* Venue & Location Section with Fade-in Animation */}
       <FadeInOnScroll>
-        <VenueLocation />
+        <VenueLocation activeSide={side} />
       </FadeInOnScroll>
 
       {/* Honor Section with Fade-in Animation */}

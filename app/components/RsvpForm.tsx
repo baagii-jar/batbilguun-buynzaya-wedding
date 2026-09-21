@@ -42,7 +42,7 @@ export function RsvpForm() {
   return (
     <section className="relative w-full px-4 sm:px-6 py-10 bg-[#FAF7F2] flex flex-col items-center text-center">
       {/* Form Section Header */}
-      <h3 className="font-wedding-serif tracking-[0.4em] text-lg sm:text-xl font-normal text-[#8C6D37] uppercase mb-1">
+      <h3 className="font-wedding-serif tracking-[0.4em] text-sm sm:text-base font-normal text-[#8C6D37] uppercase mb-1 whitespace-nowrap">
         Б А Т А Л Г А А Ж У У Л А Х
       </h3>
 
