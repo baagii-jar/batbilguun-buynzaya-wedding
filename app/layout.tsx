@@ -15,12 +15,12 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://urilga.online'),
   title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
   description: "Аав ээж, ах дүү, найз нөхөд та бүхнийгээ манай хуримын баярт хүрэлцэн ирэхийг урьж байна.",
   openGraph: {
     title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
     description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
-    images: ["/images/cover.png"],
   },
 };
 

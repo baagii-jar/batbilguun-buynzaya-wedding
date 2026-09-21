@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/noto-serif": "^5.3.0",
     "@supabase/supabase-js": "^2.116.0",
     "browser-image-compression": "^2.0.2",
     "canvas-confetti": "^1.9.4",
