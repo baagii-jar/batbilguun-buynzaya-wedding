@@ -48,48 +48,48 @@ export function CountdownTimer() {
 
   if (!isMounted) {
     return (
-      <div className="w-full px-6 py-6 bg-[#FAF8F5]">
-        <div className="h-16 bg-[#F4EFE9]/50 rounded-xl animate-pulse" />
+      <div className="w-full py-4 flex justify-center">
+        <div className="h-12 w-48 bg-[#EFE9E0]/50 rounded animate-pulse" />
       </div>
     );
   }
 
   const timerItems = [
-    { label: "өдөр", value: timeLeft.days },
-    { label: "цаг", value: timeLeft.hours },
-    { label: "минут", value: timeLeft.minutes },
-    { label: "секунд", value: timeLeft.seconds },
+    { label: "ӨДӨР", value: timeLeft.days },
+    { label: "ЦАГ", value: timeLeft.hours },
+    { label: "МИНУТ", value: timeLeft.minutes },
+    { label: "СЕКУНД", value: timeLeft.seconds },
   ];
 
   return (
-    <section className="w-full px-6 py-6 bg-[#FAF8F5] flex flex-col items-center">
-      {/* Small Header Label */}
-      <p className="font-wedding-serif text-[#C5A059] italic text-base sm:text-lg mb-3">
+    <div className="w-full flex flex-col items-center py-2">
+      {/* Header Label in Italic Serif */}
+      <p className="font-wedding-serif italic text-[#8C6D37] text-lg sm:text-xl mb-3 tracking-wide">
         Хурим хүртэл:
       </p>
 
-      {/* Borderless Floating Countdown Grid */}
-      <div className="flex items-center justify-center gap-3 sm:gap-4 w-full">
+      {/* Timer Numbers & Labels Row */}
+      <div className="flex items-center justify-center gap-3 sm:gap-4">
         {timerItems.map((item, index) => (
           <div key={index} className="flex items-center">
-            <div className="flex flex-col items-center">
-              <span className="font-wedding-serif text-3xl sm:text-4xl font-semibold text-[#2C2825] leading-none">
+            <div className="flex flex-col items-center min-w-[38px]">
+              <span className="font-wedding-serif text-3xl sm:text-4xl font-normal text-[#2C261F] leading-none">
                 {String(item.value).padStart(2, "0")}
               </span>
-              <span className="text-[11px] font-normal text-[#786F66] mt-1 tracking-wider lowercase">
+              <span className="text-[9px] sm:text-[10px] font-semibold text-[#8C8275] mt-1.5 tracking-[0.15em] uppercase">
                 {item.label}
               </span>
             </div>
 
             {/* Separator colon */}
             {index < timerItems.length - 1 && (
-              <span className="font-wedding-serif text-xl text-[#C5A059]/70 ml-3 sm:ml-4 -mt-3">
+              <span className="font-wedding-serif text-xl text-[#C5A059]/80 ml-3 sm:ml-4 -mt-3 font-light">
                 :
               </span>
             )}
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

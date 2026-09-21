@@ -6,15 +6,15 @@ import { FallingPetals } from "./FallingPetals";
 import { OpeningGate } from "./OpeningGate";
 import { MusicPlayer } from "./MusicPlayer";
 import { WeddingCover } from "./WeddingCover";
-import { CountdownTimer } from "./CountdownTimer";
-import { InvitationText } from "./InvitationText";
 import { FancyCalendar } from "./FancyCalendar";
+import { InvitationText } from "./InvitationText";
 import { VenueLocation } from "./VenueLocation";
 import { HonorSection } from "./HonorSection";
 import { PhotoGallery } from "./PhotoGallery";
 import { RsvpForm } from "./RsvpForm";
 import { FooterSection } from "./FooterSection";
 import { InvitationSide } from "./SideSwitcher";
+import { FadeInOnScroll } from "./FadeInOnScroll";
 
 interface WeddingInvitePageProps {
   side?: InvitationSide;
@@ -38,14 +38,40 @@ export function WeddingInvitePage({ side = "husband" }: WeddingInvitePageProps) 
       {/* Floating Leaves & Flower Petals Animation */}
       <FallingPetals />
 
+      {/* Hero Cover & Countdown Timer */}
       <WeddingCover activeSide={side} />
-      <CountdownTimer />
-      <InvitationText activeSide={side} />
-      <FancyCalendar />
-      <VenueLocation />
-      <HonorSection activeSide={side} />
-      <PhotoGallery />
-      <RsvpForm />
+
+      {/* Invitation Letter Box with Fade-in Animation */}
+      <FadeInOnScroll>
+        <InvitationText activeSide={side} />
+      </FadeInOnScroll>
+
+      {/* Calendar Section with Fade-in Animation */}
+      <FadeInOnScroll>
+        <FancyCalendar />
+      </FadeInOnScroll>
+
+      {/* Venue & Location Section with Fade-in Animation */}
+      <FadeInOnScroll>
+        <VenueLocation />
+      </FadeInOnScroll>
+
+      {/* Honor Section with Fade-in Animation */}
+      <FadeInOnScroll>
+        <HonorSection activeSide={side} />
+      </FadeInOnScroll>
+
+      {/* Photo Gallery with Fade-in Animation */}
+      <FadeInOnScroll>
+        <PhotoGallery />
+      </FadeInOnScroll>
+
+      {/* RSVP Form with Fade-in Animation */}
+      <FadeInOnScroll>
+        <RsvpForm />
+      </FadeInOnScroll>
+
+      {/* Footer Section */}
       <FooterSection />
     </DesktopWrapper>
   );

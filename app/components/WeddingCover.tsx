@@ -2,6 +2,12 @@
 
 import Image from "next/image";
 import { InvitationSide } from "./SideSwitcher";
+import {
+  BotanicalMoonWreath,
+  OliveBranchDivider,
+  SideBotanicalBranch,
+} from "./FloralDecor";
+import { CountdownTimer } from "./CountdownTimer";
 
 interface WeddingCoverProps {
   activeSide?: InvitationSide;
@@ -14,51 +20,54 @@ export function WeddingCover({ activeSide = "husband" }: WeddingCoverProps) {
   const secondName = isHusbandSide ? "Н.Буянзаяа" : "Ц.Батбилгүүн";
 
   return (
-    <section className="relative w-full bg-[#FAF8F5] flex flex-col items-center overflow-hidden pb-6">
-      {/* Upper Photo Section with Soft Gradient Mask */}
-      <div className="relative w-full aspect-[4/5] max-h-[520px]">
+    <section className="relative w-full bg-[#FAF7F2] flex flex-col items-center overflow-hidden pb-8 text-center">
+      {/* Upper Photo Section with Soft Gradient Mask & Grayscale Filter (Image 1 Style) */}
+      <div className="relative w-full aspect-[4/5] max-h-[500px]">
         <Image
           src="/images/cover.jpg"
           alt="Ц.Батбилгүүн & Н.Буянзаяа хуримын зураг"
           fill
           priority
-          sizes="(max-width: 480px) 100vw, 460px"
+          sizes="(max-width: 480px) 100vw, 480px"
           className="object-cover object-top mask-gradient-hero"
         />
-        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#FAF8F5] via-[#FAF8F5]/90 to-transparent pointer-events-none" />
+        {/* Soft Fade Mask into background */}
+        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#FAF7F2] via-[#FAF7F2]/90 to-transparent pointer-events-none" />
       </div>
 
-      {/* Invitation Title & Typography Content */}
-      <div className="relative z-10 -mt-10 px-6 text-center flex flex-col items-center w-full">
-        {/* Header Tag */}
-        <p className="text-xs sm:text-sm font-semibold tracking-[0.35em] text-[#C5A059] uppercase mb-3">
-          Х У Р И М Ы Н &nbsp; У Р И Л Г А
-        </p>
+      {/* Typography & Hero Content */}
+      <div className="relative z-10 -mt-12 px-6 flex flex-col items-center w-full max-w-md">
+        {/* Wreath Emblem with Crescent Moon */}
+        <BotanicalMoonWreath className="w-20 h-20 mb-2 drop-shadow-sm" />
 
-        {/* Groom & Bride Names */}
-        <h1 className="font-wedding-serif text-3xl sm:text-4xl font-semibold text-[#2C2825] leading-tight tracking-tight mb-1">
-          {firstName} <span className="text-[#C5A059] font-normal">&amp;</span>
+        {/* Groom & Bride Names in Golden Serif Italic */}
+        <h1 className="font-wedding-serif italic text-4xl sm:text-5xl font-normal text-[#8C6D37] leading-tight mb-0.5 tracking-wide">
+          {firstName}
         </h1>
-        <h2 className="font-wedding-serif text-3xl sm:text-4xl font-semibold text-[#2C2825] leading-tight tracking-tight mb-3">
+        <p className="font-wedding-serif italic text-2xl text-[#C5A059] font-normal my-0.5">
+          &amp;
+        </p>
+        <h2 className="font-wedding-serif italic text-4xl sm:text-5xl font-normal text-[#8C6D37] leading-tight mb-3 tracking-wide">
           {secondName}
         </h2>
 
-        {/* Child Subtitle */}
-        <p className="text-xs sm:text-sm text-[#786F66] font-medium tracking-wide mb-4">
-          хүү Б.Игүүн
+        {/* Subtitle */}
+        <p className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.45em] text-[#7A7167] mb-2">
+          Х У Р И М Ы Н &nbsp; Ё С Л О Л
         </p>
 
-        {/* Decorative Divider */}
-        <div className="w-12 h-[1px] bg-[#C5A059]/50 mb-5" />
+        {/* Olive Branch Divider */}
+        <OliveBranchDivider className="w-56 h-6 mb-4" />
 
-        {/* Venue, Date & Time Line */}
-        <div className="text-xs sm:text-sm font-medium tracking-wider text-[#3D352E] uppercase space-y-1">
-          <p className="font-semibold text-[#2C2825]">
-            Ховд аймаг &bull; Жаргалант сум
-          </p>
-          <p className="text-[#C5A059] font-bold">
-            2026.10.04 &bull; 12:00 ЦАГТ
-          </p>
+        {/* Countdown Timer with Side Botanical Accent (Image 1) */}
+        <div className="relative w-full flex items-center justify-center pt-2">
+          {/* Main Countdown Timer Component */}
+          <CountdownTimer />
+
+          {/* Right Curved Side Botanical Leaf Accessory */}
+          <div className="absolute -right-4 top-0 bottom-0 flex items-center pointer-events-none opacity-85">
+            <SideBotanicalBranch className="w-24 h-40" />
+          </div>
         </div>
       </div>
     </section>

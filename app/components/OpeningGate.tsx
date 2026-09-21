@@ -49,31 +49,31 @@ export function OpeningGate({ onOpen }: OpeningGateProps) {
         {/* Overlaid Typography & Open Trigger Content */}
         <div className="relative z-10 w-full px-6 pb-12 pt-20 text-center flex flex-col items-center">
           {/* Eyebrow Tag */}
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#D4AF37] mb-3 drop-shadow">
+          <p className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.45em] text-[#D8B97C] mb-4 drop-shadow">
             У Р И Л Г А
           </p>
 
           {/* Names */}
-          <h1 className="font-wedding-serif text-4xl sm:text-5xl font-semibold text-white leading-tight mb-1 drop-shadow-md">
+          <h1 className="font-wedding-serif italic text-4xl sm:text-5xl font-normal text-[#FAF7F2] leading-tight mb-0.5 drop-shadow-md tracking-wide">
             Ц.Батбилгүүн
           </h1>
-          <p className="font-wedding-serif text-2xl text-[#D4AF37] font-normal my-1 italic">
+          <p className="font-wedding-serif italic text-2xl sm:text-3xl text-[#D8B97C] font-normal my-0.5">
             &amp;
           </p>
-          <h2 className="font-wedding-serif text-4xl sm:text-5xl font-semibold text-white leading-tight mb-4 drop-shadow-md">
+          <h2 className="font-wedding-serif italic text-4xl sm:text-5xl font-normal text-[#FAF7F2] leading-tight mb-4 drop-shadow-md tracking-wide">
             Н.Буянзаяа
           </h2>
 
           {/* Subtitle */}
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-stone-300 mb-8 drop-shadow">
+          <p className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.4em] text-[#D0C4B4] mb-8 drop-shadow">
             Х У Р И М Ы Н &nbsp; Ё С Л О Л
           </p>
 
-          {/* Clean Open Button (No icons) */}
+          {/* Clean Borderless Open Button with Soft Blend Effect */}
           <button
             type="button"
             onClick={handleOpenInvite}
-            className="w-full max-w-[260px] bg-gradient-to-r from-[#D4AF37] via-[#C5A059] to-[#B8860B] hover:brightness-110 text-[#1C170E] py-3.5 px-6 rounded-lg text-xs font-bold uppercase tracking-[0.2em] shadow-2xl gold-border-glow transition-all active:scale-95 border border-[#F4E8D0]/40"
+            className="w-full max-w-[260px] btn-gold-blend py-3.5 px-6 rounded text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] cursor-pointer"
           >
             Урилгаа нээх
           </button>
