@@ -36,6 +36,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  facebook: {
+    appId: "1600484488335139",
+  },
   twitter: {
     card: "summary_large_image",
     title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
