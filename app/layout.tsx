@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://batbilguun-buynzaya-wedding.vercel.app/images/cover123.png?v=3",
-        secureUrl: "https://batbilguun-buynzaya-wedding.vercel.app/images/cover123.png?v=3",
+        url: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=4",
+        secureUrl: "https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=4",
         width: 1200,
         height: 630,
-        type: "image/png",
+        type: "image/jpeg",
         alt: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
       },
     ],
