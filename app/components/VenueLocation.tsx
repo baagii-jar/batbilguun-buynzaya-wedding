@@ -12,14 +12,14 @@ export function VenueLocation({ activeSide = "husband" }: VenueLocationProps) {
 
   const locationData = isHusbandSide
     ? {
-        main: "Х О В Д &nbsp; А Й М А Г &nbsp; &bull; &nbsp; З Э Р Э Г &nbsp; С У М",
-        sub: "Гүвээ баг, Гүвээ эхэн зоод болно",
-        query: "Ховд аймаг Зэрэг сум Гүвээ баг",
-      }
-    : {
         main: "Х О В Д &nbsp; А Й М А Г &nbsp; &bull; &nbsp; Ж А Р Г А Л А Н Т &nbsp; С У М",
         sub: "Тахилт 16/8А тоотод",
         query: "Ховд аймаг Жаргалант сум Тахилт",
+      }
+    : {
+        main: "Х О В Д &nbsp; А Й М А Г &nbsp; &bull; &nbsp; З Э Р Э Г &nbsp; С У М",
+        sub: "Гүвээ баг, Гүвээ эхэн зоод болно",
+        query: "Ховд аймаг Зэрэг сум Гүвээ баг",
       };
 
   const googleMapsUrl = `https://maps.google.com/?q=${encodeURIComponent(locationData.query)}`;

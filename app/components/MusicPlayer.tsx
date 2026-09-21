@@ -56,7 +56,7 @@ export function MusicPlayer({ autoPlayTriggered = false }: MusicPlayerProps) {
   const stopSynthesizedMelody = () => {
     isSynthPlayingRef.current = false;
     if (audioCtxRef.current && audioCtxRef.current.state !== "closed") {
-      audioCtxRef.current.close().catch(() => {});
+      audioCtxRef.current.close().catch(() => { });
     }
   };
 
@@ -69,6 +69,10 @@ export function MusicPlayer({ autoPlayTriggered = false }: MusicPlayerProps) {
       setIsPlaying(false);
     } else {
       if (audioRef.current) {
+        // Start from 14 seconds if it's the very beginning
+        if (audioRef.current.currentTime < 14) {
+          audioRef.current.currentTime = 14;
+        }
         audioRef.current
           .play()
           .then(() => {
@@ -94,17 +98,16 @@ export function MusicPlayer({ autoPlayTriggered = false }: MusicPlayerProps) {
 
   return (
     <>
-      <audio ref={audioRef} src="/music.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/The BAATAR ft OYU - BUGJ (Official Music Video).mp4" loop preload="auto" />
 
       {/* Floating Music Button */}
       <button
         type="button"
         onClick={togglePlay}
-        className={`fixed top-4 right-4 z-40 p-3 rounded-full shadow-lg border transition-all duration-300 flex items-center justify-center gap-2 ${
-          isPlaying
+        className={`fixed top-4 right-4 z-40 p-3 rounded-full shadow-lg border transition-all duration-300 flex items-center justify-center gap-2 ${isPlaying
             ? "bg-[#C5A059] text-white border-[#C5A059] gold-border-glow scale-105"
             : "bg-[#FFFFFF]/90 text-[#786F66] border-[#E8DFD5] hover:text-[#2C2825]"
-        }`}
+          }`}
         aria-label="Хөгжим асаах / унтраах"
       >
         <Music className={`w-4 h-4 ${isPlaying ? "animate-spin-slow" : ""}`} />

@@ -11,7 +11,9 @@ import { InvitationText } from "./InvitationText";
 import { VenueLocation } from "./VenueLocation";
 import { HonorSection } from "./HonorSection";
 import { PhotoGallery } from "./PhotoGallery";
+import { SinglePhoto } from "./SinglePhoto";
 import { RsvpForm } from "./RsvpForm";
+import { CommentSection } from "./CommentSection";
 import { FooterSection } from "./FooterSection";
 import { InvitationSide } from "./SideSwitcher";
 import { FadeInOnScroll } from "./FadeInOnScroll";
@@ -46,9 +48,19 @@ export function WeddingInvitePage({ side = "husband" }: WeddingInvitePageProps) 
         <InvitationText activeSide={side} />
       </FadeInOnScroll>
 
+      {/* Interstitial Photo 1 */}
+      <FadeInOnScroll>
+        <SinglePhoto src="/images/aAiJG4GJ.jpg" alt="Хуримын зураг 1" />
+      </FadeInOnScroll>
+
       {/* Calendar Section with Fade-in Animation */}
       <FadeInOnScroll>
         <FancyCalendar />
+      </FadeInOnScroll>
+
+      {/* Interstitial Photo 2 */}
+      <FadeInOnScroll>
+        <SinglePhoto src="/images/QpUbVMfa.jpg" alt="Хуримын зураг 2" />
       </FadeInOnScroll>
 
       {/* Venue & Location Section with Fade-in Animation */}
@@ -61,6 +73,11 @@ export function WeddingInvitePage({ side = "husband" }: WeddingInvitePageProps) 
         <HonorSection activeSide={side} />
       </FadeInOnScroll>
 
+      {/* Interstitial Photo 3 */}
+      <FadeInOnScroll>
+        <SinglePhoto src="/images/u-5-GFJs.jpg" alt="Хуримын зураг 3" />
+      </FadeInOnScroll>
+
       {/* Photo Gallery with Fade-in Animation */}
       <FadeInOnScroll>
         <PhotoGallery />
@@ -69,6 +86,11 @@ export function WeddingInvitePage({ side = "husband" }: WeddingInvitePageProps) 
       {/* RSVP Form with Fade-in Animation */}
       <FadeInOnScroll>
         <RsvpForm />
+      </FadeInOnScroll>
+
+      {/* Comment Section with Fade-in Animation */}
+      <FadeInOnScroll>
+        <CommentSection />
       </FadeInOnScroll>
 
       {/* Footer Section */}

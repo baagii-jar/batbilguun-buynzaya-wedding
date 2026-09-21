@@ -22,12 +22,13 @@ export function WeddingCover({ activeSide = "husband" }: WeddingCoverProps) {
   return (
     <section className="relative w-full bg-[#FAF7F2] flex flex-col items-center overflow-hidden pb-8 text-center">
       {/* Upper Photo Section with Soft Gradient Mask & Grayscale Filter (Image 1 Style) */}
-      <div className="relative w-full aspect-[4/5] max-h-[500px]">
+      <div className="relative w-full max-w-[380px] mx-auto aspect-[4/5] max-h-[420px]">
         <Image
-          src="/images/cover.jpg"
+          src="/images/chtXKuen.jpg"
           alt="Ц.Батбилгүүн & Н.Буянзаяа хуримын зураг"
           fill
           priority
+          quality={100}
           sizes="(max-width: 480px) 100vw, 480px"
           className="object-cover object-top mask-gradient-hero"
         />

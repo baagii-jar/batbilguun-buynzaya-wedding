@@ -41,7 +41,7 @@ export function InvitationText({ activeSide = "husband" }: InvitationTextProps) 
         <VictorianCrownScroll className="w-36 h-10 mb-4 text-[#C5A059]" />
 
         {/* Salutation Header */}
-        <h3 className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-[#2C261F] uppercase mb-2 leading-relaxed max-w-xs">
+        <h3 className="font-wedding-serif text-sm sm:text-base text-[#8C6D37] tracking-[0.1em] uppercase mb-2 leading-relaxed max-w-xs">
           ЭРХЭМ ХҮНДЭТ ТӨРӨЛ ТӨРӨГСӨД, ХАМААТАН САДАН, АНД НӨХӨД ӨӨ!
         </h3>
 
@@ -64,33 +64,38 @@ export function InvitationText({ activeSide = "husband" }: InvitationTextProps) 
         <VictorianCrownScroll className="w-28 h-8 my-3 text-[#C5A059]/80 transform scale-y-[-1]" />
 
         {/* Heartfelt Mongolian Wedding Invitation Poem */}
-        <div className="space-y-3 my-3 max-w-xs text-xs sm:text-sm text-[#4A4237] leading-relaxed font-normal">
-          <p className="uppercase tracking-widest font-semibold text-[#8C6D37]">
+        <div className="space-y-3 my-3 max-w-xs text-sm sm:text-base font-wedding-serif text-[#8C6D37] leading-relaxed">
+          <p className="uppercase tracking-widest">
             ААВ ЭЭЖИЙН БУЯН ШИГШСЭН
           </p>
-          <p className="uppercase tracking-widest font-medium">
+          <p className="uppercase tracking-widest">
             ХАЙРЫН АМГАЛАН ТЭНГЭР ДОР
           </p>
-          <p className="uppercase tracking-widest font-medium">
+          <p className="uppercase tracking-widest">
             ХОТОЛ ОЛНОО НЭГТГЭН
           </p>
-          <p className="uppercase tracking-widest font-bold text-[#2C261F]">
+          <p className="uppercase tracking-widest">
             ШИНЭ ГЭР БҮЛ БОЛЖ БАЙНА.
           </p>
           <div className="w-12 h-[1px] bg-[#C5A059]/40 mx-auto my-3" />
-          <p className="uppercase tracking-wider font-normal text-[#3D352E]">
+          <p className="uppercase tracking-wider">
             ЭНЭХҮҮ НАНДИН ЖАРГАЛТАЙ БАЯРТ МИНЬ ХҮРЭЛЦЭН ИРЖ, ЕРӨӨЛ ӨРГӨН, ГАЛ ГОЛОМТЫГ МААНЬ БАДРААХАД ОРОЛЦОХЫГ ХҮНДЭТГЭН УРЬЖ БАЙНА.
           </p>
         </div>
 
         {/* Family Parents Note */}
-        <div className="mt-4 pt-3 border-t border-[#C5A059]/30 w-full max-w-xs text-[11px] text-[#786F66]">
-          <p className="font-semibold text-[#8C6D37] uppercase tracking-wider mb-0.5">
-            {isHusbandSide ? "Хүүгийн эцэг эх:" : "Охины эцэг эх:"}
-          </p>
-          <p className="font-wedding-serif text-sm text-[#2C261F]">
-            {isHusbandSide ? husbandParents : wifeParents}
-          </p>
+        <div className="mt-4 pt-4 border-t border-[#C5A059]/30 w-full flex justify-between px-1 text-center font-wedding-serif text-[#8C6D37]">
+          <div className="flex flex-col w-1/2 items-center">
+            <span className="uppercase text-[9px] sm:text-[10px] tracking-widest mb-1 text-[#786F66]">Хүүгийн эцэг эх:</span>
+            <span className="text-[13px] sm:text-sm">Ц.Цогбадрах &</span>
+            <span className="text-[13px] sm:text-sm">Т.Тунгалаг</span>
+          </div>
+          <div className="w-[1px] bg-[#C5A059]/30" />
+          <div className="flex flex-col w-1/2 items-center">
+            <span className="uppercase text-[9px] sm:text-[10px] tracking-widest mb-1 text-[#786F66]">Охины эцэг эх:</span>
+            <span className="text-[13px] sm:text-sm">Д.Ням-Очир &</span>
+            <span className="text-[13px] sm:text-sm">Б.Цэцэгсүрэн</span>
+          </div>
         </div>
 
         {/* Bottom Monogram Circle Wreath Emblem */}
