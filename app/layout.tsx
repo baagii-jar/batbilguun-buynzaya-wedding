@@ -21,10 +21,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
     description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
+    url: "https://batbilguun-buynzaya-wedding.vercel.app",
+    siteName: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
+    locale: "mn_MN",
+    type: "website",
     images: [
       {
-        url: '/images/cover123.png',
-        alt: 'Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга',
+        url: "https://batbilguun-buynzaya-wedding.vercel.app/images/cover123.png?v=3",
+        secureUrl: "https://batbilguun-buynzaya-wedding.vercel.app/images/cover123.png?v=3",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "Ц.Батбилгүүн & Н.Буянзаяа | Хуримын урилга",
       },
     ],
   },
