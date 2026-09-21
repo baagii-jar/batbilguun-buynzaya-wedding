@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     description: "2026 оны 10-р сарын 04-ний өдөр Ховд аймагт болох бидний хуримын ёслолд урьж байна.",
     images: ["https://batbilguun-buynzaya-wedding.vercel.app/images/Gemini_Generated_Image_svfda9svfda9svfd.jpg?v=5"],
   },
+  other: {
+    "fb:app_id": "1600484488335139",
+  },
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
